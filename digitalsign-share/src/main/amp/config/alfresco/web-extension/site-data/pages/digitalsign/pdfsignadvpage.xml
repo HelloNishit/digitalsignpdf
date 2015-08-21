@@ -1,0 +1,4 @@
+<page>
+	<template-instance>pdfsignadvpage_template-instances</template-instance>
+	<authentication>user</authentication>
+</page>

@@ -1,0 +1,32 @@
+<alfresco-config>
+
+	<!-- Custom DocLibActions config section -->
+	<config evaluator="string-compare" condition="DocLibActions">
+		<actions>
+			<action id="pdf-signer" type="javascript" label="actions.document.pdf-signer">
+				<param name="function">onPDFSignAction</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<evaluator negate="true">evaluator.doclib.action.isLocked
+				</evaluator>
+			</action>
+		</actions>
+		<actionGroups>
+			<actionGroup id="document-browse">
+				<action index="370" id="pdf-signer" />
+			</actionGroup>
+			<actionGroup id="document-details">
+				<action index="400" id="pdf-signer" />
+			</actionGroup>
+		</actionGroups>
+	</config>
+
+	<config evaluator="string-compare" condition="DocLibCustom">
+		<dependencies>
+		    <!-- <cs src="alfresco/css/my-customization.css" />-->  
+		    <js src="/js/digitalsign/pdf/pdfaction.js" /> 
+		</dependencies>
+	</config>
+
+</alfresco-config>

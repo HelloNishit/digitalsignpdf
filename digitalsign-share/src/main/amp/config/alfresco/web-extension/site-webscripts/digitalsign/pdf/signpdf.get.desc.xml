@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Add event</shortname>
+  <description>Add event component</description>
+  <url>/components/digitalsign/pdfsign</url>
+</webscript>
